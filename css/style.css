@@ -14,6 +14,15 @@ html {
     overflow-x: hidden;
 }
 
+
+a {
+    color: white;
+    text-decoration: none
+}
+
+li {
+    list-style: none;
+}
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
@@ -26,8 +35,8 @@ body {
 
 }
 .navigation {
-    margin-bottom: 2rem;
-    border-bottom: 
+    display: grid;
+
 }
 .heading-none {
     display: none
@@ -68,8 +77,10 @@ body {
 .nav-two {
     background-color: white;
     color:grey;
-position: sticky;
-    z-index: 999;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 9999;
 
 }
 .nav-two ul{
@@ -87,9 +98,6 @@ position: sticky;
 }
 
 
-main  {
-    margin-top: 50rem;
-}
 .search {
     background-color: white;
     float: right;
@@ -98,4 +106,94 @@ main  {
     border-left: 1px solid rgb(201, 199, 199);
     height: 5rem;
     padding: 1rem 2rem;
+}
+
+.header-blocks {
+    background-color: rgb(209, 207, 207);
+    padding: 1rem;
+    color: white;
+}
+
+@media (min-width: 640px) {
+    .header-blocks {
+        display: grid;
+        grid-template-columns:repeat( 3, 1fr);
+        grid-template-rows: repeat(3,250px);
+        grid-gap:10px;
+    }
+
+
+    /* .cover-story-text {
+    position: absolute;
+    bottom: 16%;
+  } */
+
+
+}
+
+.cover-story {
+    padding: 1rem 2rem;
+  
+}
+.cover-story:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3
+}
+.cover-story:nth-child(3){
+    grid-column: 3 / 3
+}     
+
+.cover-story:nth-child(1) {
+    background-image: linear-gradient(to right bottom, rgba(213, 118, 111, 0.8), rgba(13, 38, 117, 0.39)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/ETORO-arrows5-796x448.jpg);
+    background-size: cover;
+}
+.cover-story:nth-child(2) {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/Untitled-design-2-3-796x417.png);
+    background-size: cover;
+}
+.cover-story:nth-child(3) {
+    background-image:  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/Untitled-design-2-3-796x417.png);
+    background-size: cover;
+}
+
+.cover-date {
+    float: right;
+}
+
+
+.cover-story-text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-end;
+  }
+  
+.cover-story-text h2 {
+    
+    display: grid;
+    font-size: 4.5rem;
+    line-height: 1.1;
+}
+
+.cover-story-text ul {
+    font-size: 1.2rem;
+    color: rgb(199, 191, 191);
+    display: flex;
+}
+
+a {
+    color: white;
+    text-decoration: none
+}
+
+.cover-story-text ul li{
+    margin-right: 1rem;
+}
+
+.fa-clock , .fa-share-alt {
+    margin-right: .5rem;
+}
+
+
+.small-cover h2 {
+    font-size: 2rem;
 }
