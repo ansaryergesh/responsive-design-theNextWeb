@@ -223,12 +223,53 @@ a {
 
 .latest-news-header {
     grid-column: 1 / 5;
-}
-.latest-news h2{
     color: #ff4422;
     padding-bottom: 2rem;
 }
 
-.news-block{
-   
+.article-round-head {
+    background-color: rgb(204, 185, 185);
+}
+.article-round i, .article-round span {
+    color: black;
+}
+
+.article-round-img {
+    height: 6rem;
+    position: absolute;
+    transform: translateX(15%) translateY(15%);
+
+}
+
+.header {
+    background-color: orange;
+    color: white;
+    padding: 1rem 0;
+    padding-left: 9rem;
+    font-size: 1.6rem;   
+}
+
+.article-round {
+    background-color: rgb(245, 243, 241);
+}
+.article-round-head {
+    padding: 1rem 0;
+    padding-left: 9rem;
+}
+
+.article-round a {
+    padding-left: 2rem;
+    display: flex;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+.article-round i {
+    margin-right: .5rem;
+}
+
+.article-round p {
+    font-size: 1.4rem;
+    border-top: 1px solid black;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
 }
