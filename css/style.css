@@ -278,6 +278,12 @@ a {
     padding-right: 1rem;
 }
 
+.latest-info{
+    display: grid;
+    max-width: 130rem;
+    margin:  1rem auto;
+
+}
 
 
 
@@ -332,6 +338,26 @@ a {
         grid-gap: 2rem;
         margin: 0 auto;
     }
+    .latest-info h2 {
+        color: orangered;
+    }
+
+    .image-info {
+        background-image:linear-gradient(to right bottom, rgba(24, 23, 23, 0.8), rgba(34, 35, 37, 0.39)),
+        url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/slack-ram-memory-faster-performance-desktop-796x450.jpg);
+        background-size: cover;
+        background-position: 50%;
+        height: 40vh;
+        padding-left: 2rem;  padding-right: 2rem; 
+        color: white;   
+        display: flex;
+        flex-direction: column-reverse;
+        font-weight: 600;
+    }
+  
+    .image-info a {
+        font-size: 2rem;
+    }
 
    
 
@@ -354,9 +380,38 @@ a {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1rem;
-        margin:0 auto;
+        margin:5rem auto;
         max-width: 130rem;
 
+    }
+
+    /* --------------------------- */
+
+    .latest-info {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap : 1rem;
+    }
+
+    .more-info {
+        background-color: rgb(238, 210, 210);
+        height: 25vh;
+        padding: 1rem;
+    }
+
+    .more-info h2 {
+        float: left;
+        font-size: 1.6rem;
+    }
+
+    .more-info-img{
+        float: left;
+    }
+    .item-list{
+        border-bottom: 1px solid gray;
+    }
+    .item-list a {
+        color:grey;
+        
     }
 }
 
