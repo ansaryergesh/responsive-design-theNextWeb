@@ -23,6 +23,11 @@ a {
 li {
     list-style: none;
 }
+
+.heading-none {
+    display: none
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
@@ -34,21 +39,36 @@ body {
   padding: 0;
 
 }
+
+/* Navigation */
 .navigation {
     display: grid;
 
 }
-.heading-none {
-    display: none
+
+
+.search{
+    background-color: white;
+    float: right;
+    border:none;
+    color:grey;
+    border-left: 1px solid rgb(201, 199, 199);
+    height: 5rem;
+    padding: 1rem 2rem;
 }
 
 .hamburger {
-    display: none;
+    color:orange;
+    float: right;
+    border:none;
+    height: 5rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-left: 1px solid rgb(201, 199, 199);
 }
 
 
 .logo {
-  
     height: 5rem;
     float: left;
 }
@@ -62,8 +82,7 @@ body {
 }
 
 .nav-one ul {
-    display: flex;
-  
+    display: none;
 }
 
 .nav-one-li {
@@ -84,8 +103,7 @@ body {
 
 }
 .nav-two ul{
-    display: flex;
-    float: left;
+    display: none;
 }
 
 .nav-two-li {
@@ -93,96 +111,51 @@ body {
     margin: .8rem;
 }
 
-.nav-two-li:first-child {
-    margin-left: 
-}
 
 
-.search {
-    background-color: white;
-    float: right;
-    border:none;
-    color:grey;
-    border-left: 1px solid rgb(201, 199, 199);
-    height: 5rem;
-    padding: 1rem 2rem;
-}
 
+/* Header block */
 .header-blocks {
+    display: grid;
+    grid-gap:10px;
+    grid-template-rows: 28vh 28vh 28vh;
+    padding: 4px;
+    height: 90vh;
     background-color: rgb(209, 207, 207);
     padding: 1rem;
     color: white;
-}
-
-@media (min-width: 640px) {
-    .header-blocks {
-        display: grid;
-        grid-template-columns:repeat( 3, 1fr);
-        grid-template-rows: repeat(2,250px);
-        grid-gap:10px;
-    }
-
-    
-.latest-news{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    
-    padding: 10rem 5rem;
-}
-.news-block h3{
-    line-height: 2.5rem;
-    width: 90%;
-}
-
-.list-news{
-    display: inline-flex;
-    
-}
-.list-news li{
-    margin-right: 2rem;
-    color: #AAAAAA;
-}
+}  
 
 .cover-story {
     padding: 1rem 2rem;
+    background-position: 50%;
+    background-size: cover;
   
 }
-.cover-story:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3
-}
-.cover-story:nth-child(3){
-    grid-column: 3 / 3
-}     
 
 .cover-story:nth-child(1) {
     background-image: linear-gradient(to right bottom, rgba(213, 118, 111, 0.8), rgba(13, 38, 117, 0.39)), url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/ETORO-arrows5-796x448.jpg);
-    background-size: cover;
 }
 .cover-story:nth-child(2) {
     background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/Untitled-design-2-3-796x417.png);
-    background-size: cover;
 }
 .cover-story:nth-child(3) {
     background-image:  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/Untitled-design-2-3-796x417.png);
-    background-size: cover;
 }
 
 .cover-date {
-    float: right;
+    display: none;
 }
 
 
 .cover-story-text {
-    display: flex;
-    flex-flow: column nowrap;
-    align-content: flex-end;
+    
   }
   
 .cover-story-text h2 {
     
     display: grid;
-    font-size: 4.5rem;
+    font-size: 2rem;
     line-height: 1.1;
 }
 
@@ -209,6 +182,24 @@ a {
 .small-cover h2 {
     font-size: 2rem;
 }
+
+
+
+
+.news-block h3{
+    line-height: 2.5rem;
+    width: 90%;
+}
+
+.list-news{
+    display: inline-flex;
+    
+}
+.list-news li{
+    margin-right: 2rem;
+    color: #AAAAAA;
+}
+
 
 .latest-news{
     display: grid;
@@ -273,3 +264,54 @@ a {
     padding-left: 2rem;
     padding-bottom: 2rem;
 }
+
+
+
+
+/* Media queries */ 
+
+@media only screen and (min-width: 768px) {
+    .header-blocks {
+        height: 70vh;
+        grid-template-rows: 33vh 33vh 33vh;
+        
+    }
+    .cover-story:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3
+    }
+
+    
+    .cover-story:nth-child(3){
+        grid-column: 3 / 3
+    }    
+
+
+    .hamburger {
+        display: none;
+    }
+    
+    .nav-one ul {
+        display: flex;
+    }
+    .nav-two ul {
+    display: flex;
+    float: left;
+    }
+
+    .cover-story-text h2 {
+        display: grid;
+        font-size: 4.5rem;
+    }
+
+    .small-cover h2 {
+        font-size: 2rem;
+    }
+
+    .cover-date {
+       display: inherit;
+       float: right;
+    }
+
+}
+
