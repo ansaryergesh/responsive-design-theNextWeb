@@ -189,15 +189,19 @@ a {
 
 .news-block img {
     float: left;
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 6.5rem;
 }
 .news-block-text {
+    display: grid;
+    width: 80%;
     float: left;
+    margin-left: 1rem;
     font-size: 1rem;
 }
 
 .list-news{
+    font-size: 1.2rem;
     display: inline-flex;
     
 }
@@ -208,6 +212,7 @@ a {
 
 
 .latest-news{
+    margin-left: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -221,6 +226,7 @@ a {
     grid-column: 1 / -1;
     color: #ff4422;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .article-round-head {
@@ -268,6 +274,7 @@ a {
     border-top: 1px solid black;
     padding-left: 2rem;
     padding-bottom: 2rem;
+    padding-right: 1rem;
 }
 
 
@@ -276,9 +283,6 @@ a {
 /* Media queries */ 
 /* in size of width between 768px and max-size */
 @media only screen and (min-width: 768px) {
-    /* body{
-        background-color: aquamarine
-    } */
     .header-blocks {
         height: 70vh;
         grid-template-rows: 33vh 33vh 33vh;
@@ -303,8 +307,8 @@ a {
         display: flex;
     }
     .nav-two ul {
-    display: flex;
-    float: left;
+        display: flex;
+        float: left;
     }
 
     .cover-story-text h2 {
@@ -322,31 +326,36 @@ a {
     }
 
     .latest-news {
-        
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 10rem;
-        grid-auto-rows: 30rem;
+        grid-auto-rows: 40rem;
         grid-gap: 2rem;
-        align-content: center;
-        justify-content: center;
         margin: 0 auto;
     }
 
+   
+
     .news-block h3{
+        margin-top:1rem;
         font-size: 1.8rem;
     }
-    .news-block{
-        align-items: center;
-        
-    }
     .news-block-text {
-        float: left;
+        display: grid;
         font-size:2rem;
+        width:100%;
+        margin-left:0;
     }
     .news-block img {
-        float: left;
         width: 300px;
         height: 200px;
+    }
+
+    .latest-rounds{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        margin:0 auto;
+        max-width: 130rem;
+
     }
 }
 
@@ -354,10 +363,28 @@ a {
 
 @media only screen and (min-width:767px) and (max-width: 1020px) {
     .latest-news {
-        
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 10rem;
-        grid-auto-rows: 30rem;
+        grid-auto-rows: 40rem;
+        grid-gap: 2rem;
+        margin: 0 auto;
+    }
+
+    .cover-story-text h2 {
+        display: grid;
+        font-size: 4rem;
+    }
+
+    .small-cover h2 {
+        font-size: 1.8rem;
+    }
+    
+    .latest-rounds{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+    .article-round:nth-child(4) {
+        display: none;
     }
 }
 
