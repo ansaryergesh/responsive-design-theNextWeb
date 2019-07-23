@@ -111,9 +111,6 @@ body {
     margin: .8rem;
 }
 
-
-
-
 /* Header block */
 .header-blocks {
     display: grid;
@@ -184,25 +181,20 @@ a {
 }
 
 
-.news-block{
-    grid-column: 1 / 1;
-}
-
 .news-block h3{
     font-size: 1.5rem;
     line-height: 2.5rem;
     width: 90%;
-   
-
 }
 
 .news-block img {
     float: left;
-    
+    width: 5rem;
+    height: 5rem;
 }
 .news-block-text {
     float: left;
-
+    font-size: 1rem;
 }
 
 .list-news{
@@ -217,16 +209,16 @@ a {
 
 .latest-news{
     display: grid;
-    
-    grid-gap : 1rem;
-    padding: 3rem 0;
-    padding-left: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 10rem;
+    max-width: 130rem;
 }
 
 
 
 .latest-news-header {
-    grid-column: 1 / 5;
+    grid-column: 1 / -1;
     color: #ff4422;
     padding-bottom: 2rem;
 }
@@ -284,7 +276,9 @@ a {
 /* Media queries */ 
 /* in size of width between 768px and max-size */
 @media only screen and (min-width: 768px) {
-    
+    /* body{
+        background-color: aquamarine
+    } */
     .header-blocks {
         height: 70vh;
         grid-template-rows: 33vh 33vh 33vh;
@@ -328,24 +322,42 @@ a {
     }
 
     .latest-news {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); 
         
-        padding-left: 5rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 10rem;
+        grid-auto-rows: 30rem;
+        grid-gap: 2rem;
+        align-content: center;
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .news-block h3{
         font-size: 1.8rem;
     }
-
     .news-block{
-        grid-column: 1 / 4;
+        align-items: center;
+        
+    }
+    .news-block-text {
+        float: left;
+        font-size:2rem;
+    }
+    .news-block img {
+        float: left;
+        width: 300px;
+        height: 200px;
     }
 }
 
 
 
-@media only screen and (max-width: 1000px) {
-    
+@media only screen and (min-width:767px) and (max-width: 1020px) {
+    .latest-news {
+        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10rem;
+        grid-auto-rows: 30rem;
+    }
 }
 
