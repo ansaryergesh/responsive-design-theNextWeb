@@ -12,5 +12,5 @@ Authors:
 
 The Website
 ===
-https://raw.githack.com/ansaryergesh/responsive-design-theNextWeb/develop/index.html
+https://rawcdn.githack.com/ansaryergesh/responsive-design-theNextWeb/0c31c43d2915edcc67848a282890895527ee5a2f/index.html
  
