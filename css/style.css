@@ -29,13 +29,13 @@ li {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Bitter', serif;
   font-weight: 400;
   line-height: 1.7;
   color: black;
   background-color: white;
   box-sizing: border-box; 
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   padding: 0;
 
 }
@@ -47,6 +47,9 @@ section {
 /* Navigation */
 .navigation {
     display: grid;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
 
 }
 
@@ -438,6 +441,7 @@ a {
     color: #B7B7B7;
     margin-right: .5rem;
 }
+
  .sale{
     display: none;
     background-image: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/deals-ribbon.svg");
@@ -445,6 +449,8 @@ a {
     padding-bottom: 0;
     font-weight: bold;
     position: absolute;
+    right:0;
+    top:0;
     text-align: center;
     height: 80px;
     width: 80px;
@@ -479,7 +485,7 @@ a {
 .links-social li{
     margin-left:1.5rem;
     background-color: #333333;
-    padding: 1rem 1.7rem;
+    padding: .5rem 1.2rem;
     border-radius: 50%;
     border: 1px solid #333333 
 }
@@ -517,6 +523,7 @@ a {
 /* in size of width between 768px and max-size */
 @media only screen and (min-width: 768px) {
     .header-blocks {
+        margin-top: 8rem;
         height: 70vh;
         grid-template-rows: 33vh 33vh 33vh;
         
