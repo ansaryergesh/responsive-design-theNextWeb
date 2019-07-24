@@ -40,6 +40,10 @@ body {
 
 }
 
+section {
+    padding: 0 2rem;
+}
+
 /* Navigation */
 .navigation {
     display: grid;
@@ -127,6 +131,8 @@ body {
     padding: 1rem 2rem;
     background-position: 50%;
     background-size: cover;
+    display: flex;
+    flex-direction: column-reverse
   
 }
 
@@ -145,9 +151,7 @@ body {
 }
 
 
-.cover-story-text {
-    
-  }
+
   
 .cover-story-text h2 {
     
@@ -278,12 +282,115 @@ a {
     padding-right: 1rem;
 }
 
+/* --------------------------- */
+
 .latest-info{
     display: grid;
     max-width: 130rem;
     margin:  1rem auto;
-
+    line-height: 1.5;
 }
+
+.latest-info h2 {
+    color: orangered;
+    margin-top:2rem
+}
+
+.image-info a {
+    
+}
+.image-info {
+    background-image:linear-gradient(to right bottom, rgba(24, 23, 23, 0.8), rgba(34, 35, 37, 0.39)),
+    url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/slack-ram-memory-faster-performance-desktop-796x450.jpg);
+    background-size: cover;
+    background-position: 50%;
+    height: 40vh;
+    padding-left: 1.5rem;  padding-right: 1.5rem; padding-bottom: 1rem;
+    color: white;   
+    display: flex;
+    flex-direction: column-reverse;
+    font-weight: 600;
+}
+
+.image-info a {
+    font-size: 2rem;
+}
+.most-popular {
+    font-size: 1.2rem;
+}
+
+.sml-paragraph {
+    display: flex;
+    color: rgb(197, 194, 194);
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.sml-paragraph li:last-child  {
+    margin-left: .8rem;
+    
+}
+
+.more-info {
+    display: flex;
+    background-color: rgb(238, 210, 210);
+    height: 20vh;
+    padding-left:1rem;
+    color: orangered;
+}
+.more-info-text{
+    padding-top:1rem;
+    font-size: 1rem;
+}
+
+.more-info h2 {
+    float: left;
+    font-size: 1.6rem;
+}
+
+.img-more-info{
+    height: 100%;
+    width: 25rem;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.img-more-1 {
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/Kids-Danger-796x448.jpg);
+}
+.img-more-2{
+    background-image: url(https://img-cdn.tnwcdn.com/image?fit=600%2C336&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F07%2Fbose-header-image-CHEAP-soundwear.png&signature=4ed8c802d8e40d7e440aea469d07cb3c);
+}
+.img-more-3{
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/MeToo-5-796x417.png);
+}
+.img-more-4{
+    background-image: url(https://img-cdn.tnwcdn.com/image?fit=600%2C336&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F07%2Fbose-header-image-CHEAP-soundwear.png&signature=4ed8c802d8e40d7e440aea469d07cb3c);
+}
+.img-more-5{
+    background-image: url(https://img-cdn.tnwcdn.com/image?fit=600%2C336&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F05%2FatT-blockchain-cryptocurrency-bitpay-bitcoin-ethereum-litecoin-cash-payment.jpg&signature=0c148f10ec56b27985dc62a6c0880063)
+}
+.img-more-6{
+    background-image: url(https://img-cdn.tnwcdn.com/image?fit=600%2C336&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F05%2FatT-blockchain-cryptocurrency-bitpay-bitcoin-ethereum-litecoin-cash-payment.jpg&signature=0c148f10ec56b27985dc62a6c0880063)
+}
+.img-more-7{
+    background-image: url(https://img-cdn.tnwcdn.com/image?fit=600%2C336&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F05%2FatT-blockchain-cryptocurrency-bitpay-bitcoin-ethereum-litecoin-cash-payment.jpg&signature=0c148f10ec56b27985dc62a6c0880063);
+}
+.img-more-8{
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/Kids-Danger-796x448.jpg);
+}
+
+.item-list{
+    border-bottom: 1px solid rgb(204, 200, 200);
+    padding: 1rem .5rem;
+    font-size: 1.2rem;
+}
+.item-list a {
+    color:grey;
+}
+
+
+
+
 
 
 
@@ -328,8 +435,9 @@ a {
     }
 
     .cover-date {
-       display: inherit;
-       float: right;
+       display: flex;
+       margin-left: auto;
+    
     }
 
     .latest-news {
@@ -338,27 +446,7 @@ a {
         grid-gap: 2rem;
         margin: 0 auto;
     }
-    .latest-info h2 {
-        color: orangered;
-    }
-
-    .image-info {
-        background-image:linear-gradient(to right bottom, rgba(24, 23, 23, 0.8), rgba(34, 35, 37, 0.39)),
-        url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/07/slack-ram-memory-faster-performance-desktop-796x450.jpg);
-        background-size: cover;
-        background-position: 50%;
-        height: 40vh;
-        padding-left: 2rem;  padding-right: 2rem; 
-        color: white;   
-        display: flex;
-        flex-direction: column-reverse;
-        font-weight: 600;
-    }
-  
-    .image-info a {
-        font-size: 2rem;
-    }
-
+   
    
 
     .news-block h3{
@@ -379,40 +467,19 @@ a {
     .latest-rounds{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 1rem;
+        grid-gap: 2rem;
         margin:5rem auto;
         max-width: 130rem;
 
     }
 
-    /* --------------------------- */
+    /* -----------Latest Info---------------- */
 
     .latest-info {
         grid-template-columns: repeat(3, 1fr);
-        grid-gap : 1rem;
+        grid-gap : 2rem;
     }
 
-    .more-info {
-        background-color: rgb(238, 210, 210);
-        height: 25vh;
-        padding: 1rem;
-    }
-
-    .more-info h2 {
-        float: left;
-        font-size: 1.6rem;
-    }
-
-    .more-info-img{
-        float: left;
-    }
-    .item-list{
-        border-bottom: 1px solid gray;
-    }
-    .item-list a {
-        color:grey;
-        
-    }
 }
 
 
@@ -437,7 +504,7 @@ a {
     .latest-rounds{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
+        grid-gap: 2rem;
     }
     .article-round:nth-child(4) {
         display: none;
@@ -450,5 +517,18 @@ a {
         margin-left: 1rem;
         font-size: 1rem;
     }
+
+    .news-block-text h3 {
+        font-size: 1.4rem;
+    }
+    
+    
+    .latest-info {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap : 2rem;
+    }
+
+
+   
 }
 
